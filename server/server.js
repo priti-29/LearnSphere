@@ -17,6 +17,8 @@ app.use(cors())
 
 app.get('/',(req,res)=>res.send("Api working"))
 app.post('/clerk',express.json(),clerkWebhooks)
+app.get("/favicon.ico", (req, res) => res.status(204).end());
+
 //Port
 const PORT = process.env.PORT || 5000
 
