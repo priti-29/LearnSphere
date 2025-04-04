@@ -12,10 +12,7 @@
         }
     ],
     "routes": [
-        {
-            "src": "/favicon.ico",
-            "status": 204
-          },
+    
         {
             "src": "/(.*)",
             "dest": "server.js"
