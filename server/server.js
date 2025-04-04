@@ -14,7 +14,7 @@ await connectDB()
 app.use(cors())
 
 //Routes
-app.get("/favicon.ico", (req, res) => res.status(204).end());
+
 app.get('/',(req,res)=>res.send("Api working"))
 app.post('/clerk',express.json(),clerkWebhooks)
 
