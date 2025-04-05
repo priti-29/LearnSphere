@@ -3,7 +3,8 @@ import { Purchase } from '../models/Purchase.js';
 import Stripe from 'stripe';
 import Course from '../models/Course.js';
 import { courseProgress } from '../models/CourseProgress.js';
-export const getUserData = async ()=>{
+
+export const getUserData = async (req,res)=>{
     try{
         const userId = req.auth.userId
         const user = await User.findById(userId)
