@@ -20,7 +20,7 @@ await connectCloudinary()
 app.use(cors())
 app.use(clerkMiddleware())
 
-app.post('/stripe',express.raw({type:'application/json'}),stripeWebhooks)
+app.post('/stripe',express.raw({type: 'application/json'}),stripeWebhooks)
 
 app.use(express.json()) 
 
