@@ -77,7 +77,7 @@ export const educatorDashboardData = async (req,res)=>{
         //Calculate total earnings from purchase
         const purchases = await Purchase.find({
             courseId:{$in:courseIds},
-            status:'Completed'
+            status:'completed'
         });
         const totalEarnings = purchases.reduce((sum,purchase)=> sum + purchase.amount,0);
 
