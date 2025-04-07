@@ -37,7 +37,10 @@ const Navbar = () => {
 
   return (
     <div className={`flex items-center justify-between px-4 sm:px-10 md:px-14 lg:px-36 border-b border-gray-500 py-4 ${isCourseListPage?'bg-white':'bg-cyan-100/70'}`}>
+    <div className="flex items-center space-x-2">
+      <img onClick={()=>navigate('/')} src={assets.logo_} alt="Logo" className='w-16 lg:w-16 cursor-pointer' />
       <img onClick={()=>navigate('/')} src={assets.logo} alt="Logo" className='w-28 lg:w-32 cursor-pointer' />
+    </div>
       <div className='hidden md:flex items-center gap-5 text-gray-500'>
         <div className='flex items-center gap-5'>
           { user && 
